@@ -1,0 +1,38 @@
+.form-group{
+    text-align: center;
+    width: 100%;
+}
+
+#izq{
+    
+    z-index: 1000;
+}
+#der{
+    
+    z-index: 1000;
+    margin-top: 3.5rem;
+    margin-left: 18rem;
+    position: fixed;
+    overflow: auto;
+}
+.principal{
+    padding-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+#forma{
+    margin: auto;
+}
+#aea{
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+
+
+#minion{
+    margin-top: 6rem;
+    text-align: center;
+}

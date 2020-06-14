@@ -1,0 +1,10 @@
+#pri{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand{
+  padding-left: 4rem;
+  margin: auto;
+}

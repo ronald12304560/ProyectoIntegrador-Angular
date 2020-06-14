@@ -1,0 +1,267 @@
+<!--
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> 
+-->
+
+
+<div class="row">
+<div class="col col-xl-3 col col-lg-4 col-md-12 col-sm-12">
+
+
+
+    <nav class="navbar  navbar-dark bg-danger no-gutters" id="primo">
+        <nav><a class="navbar-brand" href="home">
+                <h3 id="s-title">Menú</h3>
+            </a></nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <nav>
+                <ul id="pikachu">
+                <hr>    
+                    <div class="mb-3">
+                        <a href="trabajos" id="aeacito">
+                            <div class="d-flex w-100 justify-content-start align-items-center" >
+                                <span class="fa fa-calendar fa-fw mr-3"></span>
+                                <span class="menu-collapsed">Trabajos</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mb-3">
+                        <a href="/clienteindex" id="aeacito">
+                            <div class="d-flex w-100 justify-content-start align-items-center" >
+                                <span class="fa fa-user fa-fw mr-3"></span>
+                                <span class="menu-collapsed">Egresados</span>
+                            </div>
+                        </a>
+                    </div>
+                </ul>          
+            </nav>
+        </div>
+    </nav>
+
+
+
+
+</div>
+<div class="col col-xl-9 col col-lg-8 col-md-12 col-sm-12" id="paraBuscar">
+
+<div class="container" class="col">
+  <div class="col col-lg-12 col-md-12 col-sm-12">
+    <nav>
+      <button type="button" class="btn btn-secondary"routerLink="/clienteform" routerLinkActive="active">Nuevo Titulo</button>
+    </nav>
+    <hr>
+  </div>
+    <div class="row">
+      <div class="col col-lg-6 col-md-12 col-sm-12">
+        <div class="form-group">
+          <label class="col-form-label" for="inputDefault">Buscar por Código</label>
+          <input type="search" [(ngModel)]="searchText" class="form-control" placeholder="Algún código" id="inputDefault">
+        </div>
+        <div class="form-group">
+          <label class="col-form-label" for="inputDefault">Buscar por Apellido Paterno</label>
+          <input type="search" [(ngModel)]="paterno" class="form-control" placeholder="Algún Apellido Paterno" id="inputDefault">
+        </div>
+        <div class="form-group">
+          <label class="col-form-label" for="inputDefault">Buscar por Apellido Materno</label>
+          <input type="search" [(ngModel)]="materno" class="form-control" placeholder="Algún Apellido Materno" id="inputDefault">
+        </div>
+      </div>
+      <div class="col col-lg-6 col-md-12 col-sm-12">
+        <div class="form-group">
+          <label for="exampleSelect1">Seleccionar Sexo</label>
+          <select name="select" class="form-control" id="exampleSelect1" [(ngModel)]="sexo">
+            <option value="" selected>Todos</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleSelect1">Seleccionar Año de Egreso</label>
+          <select name="select" class="form-control" id="exampleSelect1" [(ngModel)]="aegreso">
+            <option selected value="">Todos</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
+    <!--
+    <thead class="table table-secondary"> 
+      <tr>
+        <td scope="col">Codigo</td>
+        <td scope="col">Ap.Paterno</td>
+        <td scope="col">Ap.Materno</td>
+        <td scope="col">Nombre</td>
+        <td scope="col">Sexo</td>
+        <td scope="col">Dni</td>
+        <td scope="col">Facultad</td>
+        <td scope="col">Carrera</td>
+        <td scope="col">Año Egreso</td>
+        <td scope="col">Archivo</td>
+        <td scope="col">Opc</td>
+      </tr>
+    </thead>
+    <tbody *ngFor="let d of list | filter:searchText:'codi' | filter:paterno:'ap_paterno'  | filter:materno:'ap_materno' | filter:sexo:'sexo' | filter:aegreso:'an_egreso_an'">
+      <tr>
+        <td><span>{{ d.codi }}</span></td>
+        <td> <span>{{ d.ap_paterno }}</span></td>
+        <td><span>{{ d.ap_materno }}</span></td>
+        <td><span>{{ d.nombre }}</span></td>
+        <td><span>{{ d.sexo }}</span></td>
+        <td><span>{{ d.dni }}</span></td>
+        <td> <span>{{ d.facultad }}</span></td>
+        <td><span>{{ d.carrera }}</span></td>
+        <td><span>{{ d.an_egreso_an }}</span></td>
+        <td><button><img src="" alt=""></button></td>  
+        <span><a routerLink="/clienteform/{{ d.id }}" routerLinkActive="active">Edit</a></span>
+      </tr>
+    </tbody>
+  -->
+
+
+  <!--
+  <div class="row mb-4">
+
+      <div class="col-md-12">
+        <div class="card border-0 rounded-0">
+          <div class="card-title mb-1 p-3">
+            <h5>Datos de Egresados</h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive-md">
+              <table class="table table-hover col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Código</th>
+                    <th scope="col">Apellido Paterno</th>
+                    <th scope="col">Apellido Materno</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">DNI</th>
+                    <th scope="col">Facultad</th>
+                    <th scope="col">Carrera</th>
+                    <th scope="col">Año egreso</th>
+                    <th scope="col">Documento</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let d of list | filter:searchText:'codi' | filter:paterno:'ap_paterno'  | filter:materno:'ap_materno' | filter:sexo:'sexo' | filter:aegreso:'an_egreso_an'">
+                  <tr>
+                      <td><span>1</span></td>
+                      <td><span>{{ d.codi }}</span></td>
+                      <td> <span>{{ d.ap_paterno }}</span></td>
+                      <td><span>{{ d.ap_materno }}</span></td>
+                      <td><span>{{ d.nombre }}</span></td>
+                      <td><span>{{ d.sexo }}</span></td>
+                      <td><span>{{ d.dni }}</span></td>
+                      <td> <span>{{ d.facultad }}</span></td>
+                      <td><span>{{ d.carrera }}</span></td>
+                      <td><span>{{ d.an_egreso_an }}</span></td>
+                      <td><button><img src="" alt=""></button></td>  
+                      
+                      <a class="btn btn-sm btn-outline-lightning rounded-0 mr-2 " routerLink="/clienteform/{{ d.id }}" routerLinkActive="active">
+                          <fa-icon [icon]="editIcon"></fa-icon> Editar
+                        </a>
+                        <a class="btn btn-sm btn-outline-lightning rounded-0">
+                            <fa-icon [icon]="trashAltIcon"></fa-icon> Borrar
+                        </a>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+  
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  -->
+</div>
+
+</div>
+</div>
+
+
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <div class="row mb-4">
+
+            <div class="col-md-12">
+              <div class="card border-0 rounded-0">
+                <div class="card-title mb-1 p-3">
+                  <h5>Datos de Egresados</h5>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive-md">
+                    <table class="table table-hover col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Código</th>
+                          <th scope="col">Apellido Paterno</th>
+                          <th scope="col">Apellido Materno</th>
+                          <th scope="col">Nombres</th>
+                          <th scope="col">Sexo</th>
+                          <th scope="col">DNI</th>
+                          <th scope="col">Facultad</th>
+                          <th scope="col">Carrera</th>
+                          <th scope="col">Año egreso</th>
+                          <th scope="col">Documento</th>
+                          <th scope="col">Acciones</th>
+                        </tr>
+                      </thead>
+                      <tbody *ngFor="let d of list | filter:searchText:'codi' | filter:paterno:'ap_paterno'  | filter:materno:'ap_materno' | filter:sexo:'sexo' | filter:aegreso:'an_egreso_an'">
+                        <tr>
+                            <td><span>1</span></td>
+                            <td><span>{{ d.codi }}</span></td>
+                            <td> <span>{{ d.ap_paterno }}</span></td>
+                            <td><span>{{ d.ap_materno }}</span></td>
+                            <td><span>{{ d.nombre }}</span></td>
+                            <td><span>{{ d.sexo }}</span></td>
+                            <td><span>{{ d.dni }}</span></td>
+                            <td> <span>{{ d.facultad }}</span></td>
+                            <td><span>{{ d.carrera }}</span></td>
+                            <td><span>{{ d.an_egreso_an }}</span></td>
+                            <td><button><img src="" alt=""></button></td>  
+                            
+                            <a class="btn btn-sm btn-outline-lightning rounded-0 mr-2 " routerLink="/clienteform/{{ d.id }}" routerLinkActive="active">
+                                <fa-icon [icon]="editIcon"></fa-icon> Editar
+                              </a>
+                              <a class="btn btn-sm btn-outline-lightning rounded-0">
+                                  <fa-icon [icon]="trashAltIcon"></fa-icon> Borrar
+                              </a>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+        
+                </div>
+              </div>
+        
+            </div>
+          </div>
+    </div>

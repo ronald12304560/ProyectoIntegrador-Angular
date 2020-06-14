@@ -1,0 +1,139 @@
+
+<div>
+<form [formGroup]="clienteForm" (ngSubmit)="save()">
+    
+        <table class="table table-active">
+                <thead>
+                  <tr>
+                    <th scope="col"><h2><b>Registro de Titulos</b></h2>
+                    
+                    </th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-hover">
+                   
+                    <td><label>
+                            <b>Codigo:</b>
+                            <br>
+                           
+                            <input type="number" formControlName="codi" name="codi" id="codi" required class="form-control"  
+                             placeholder="Ingrese su Especialidad">
+                           
+                        </label>
+                        <img width="40" alt="Angular Logo" src="assets/img/t.png"></td>
+                  </tr>
+                  <tr class="table-hover">
+                       
+                        <td><label>
+                                <b>Ap.Paterno :</b>
+                                <br>
+                                
+                                <input type="text" formControlName="ap_paterno" name="ap_paterno" id="ap_paterno" required class="form-control"
+                                  placeholder="Ingrese su Centro de Estudios">
+                                
+                            </label>
+                            <img width="40" alt="Angular Logo" src="assets/img/co.png"></td>
+                      </tr>
+                      <tr class="table-hover">
+                           
+                            <td> <label>
+                                    <b>Ap.Materno :</b>
+                                    <br>
+                                    <input type="text" class="form-control" id="ap_materno" aria-describedby="ap_materno" placeholder="Ingrese su Nivel"formControlName="ap_materno" name="nivel" id="nivel" required>
+                                </label>
+                                <img width="40" alt="colegio Logo" src="assets/img/n.png"></td>
+                          </tr>
+                          <tr class="table-hover">
+                               
+                                <td><label>
+                                        <b>Nombre :</b>
+                                    <br>
+                                    <input type="text" formControlName="nombre" name="nombre" id="nombre" required>
+                                    
+                                </label>
+                                <img width="40" alt="Angular Logo" src="assets/img/ca.jpg"></td>
+                              </tr>
+                              <tr class="table-hover">
+                               
+                                <td><label>
+                                        <b>Sexo :</b>
+                                    <br>
+                                    
+                                    <input type="radio" name="sexo" id="sexo" value="masculino" formControlName="sexo"> Masculino<br>
+                                    <input type="radio" name="sexo" id="sexo" value="femenino" formControlName="sexo"> Femenino<br>
+                                </label>
+                                <img width="40" alt="Angular Logo" src="assets/img/ca.jpg">
+                              </td>
+                              </tr>
+                              <tr class="table-hover">
+                               
+                                <td><label>
+                                        <b>DNI :</b>
+                                    <br>
+                                    <input type="number" formControlName="dni" name="dni" id="dni" required>
+                                    
+                                </label>
+                                <img width="40" alt="Angular Logo" src="assets/img/ca.jpg"></td>
+                              </tr>
+                              <tr class="table-hover">
+                               
+                                <td><label>
+                                        <b>Facultad :</b>
+                                    <br>
+                                    <input type="text" formControlName="facultad" name="facultad" id="facultad" required>
+                                    
+                                </label>
+                                <img width="40" alt="Angular Logo" src="assets/img/ca.jpg"></td>
+                              </tr>
+                              <tr class="table-hover">
+                               
+                                <td><label>
+                                        <b>Carrera :</b>
+                                    <br>
+                                    <input type="text" formControlName="carrera" name="carrera" id="carrera" required>
+                                    
+                                </label>
+                                <img width="40" alt="Angular Logo" src="assets/img/ca.jpg"></td>
+                              </tr>
+                                  <tr class="table-hover">
+                                       
+                                        <td><label>
+                                                <b>EGRESO :</b>
+                                            <br>
+                                            <input type="date" formControlName="an_egreso" name="an_egreso" id="an_egreso" required>
+                                        </label>
+                                        <img width="40" alt="Angular Logo" src="assets/img/ca.jpg"></td>
+                                      </tr>
+                                      <tr class="table-hover">
+                                       
+                                        <td><label>
+                                                <b>AÑO EGRESO :</b>
+                                            <br>
+                                            <input type="number" formControlName="an_egreso_an" name="an_egreso_an" id="an_egreso_an" required>
+                                        </label>
+                                       
+                                      </tr>
+                                      <tr class="table-hover">
+                                       
+                                        <td><label>
+                                                <b>INGRESO :</b>
+                                            <br>
+                                            <input type="date" formControlName="an_ingreso" name="an_ingreso" id="an_ingreso" required>
+                                        </label>
+                                        <img width="40" alt="Angular Logo" src="assets/img/ca.jpg">
+                                      </td>
+                                      </tr>
+                                    
+                  </tbody>
+                  </table>
+   
+    <div class="form-group">
+            <label for="exampleInputFile">Foto Del Titulo</label>
+            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">Seleccione su Titulo .</small>
+          </div>
+          <button type="submit" [disabled]="!clienteForm.valid" class="btn btn-primary" id="submit">Agregar Titulo</button>
+        </form>        
+</div>

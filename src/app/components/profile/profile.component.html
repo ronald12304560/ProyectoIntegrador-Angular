@@ -1,0 +1,77 @@
+<div class="container" class="col">
+  <nav>
+    
+    <button type="button" class="btn btn-secondary"routerLink="/clienteform" routerLinkActive="active">Nuevo Titulo</button>
+    <br>
+    <br>
+  </nav>
+  <table class="table-responsive">
+      
+          busqueda Codigo
+          <br>
+          <input type="search" [(ngModel)]="searchText" class="form-control">
+          <br>
+          busqueda Ap.Paterno
+          <br>
+          <input type="searchText" [(ngModel)]="paterno" class="form-control" >
+          <br>
+          busqueda Ap.Materno
+          <br>
+          <input type="searchText" [(ngModel)]="materno" class="form-control" >
+          <br>
+          Sexo :
+          <select name="select" class="form-control" [(ngModel)]="sexo">
+            <option value="" selected></option> 
+            <option value="masculino" >Masculino</option>
+            <option value="femenino">Femenino</option>
+          </select>
+  <br>
+          Año Egreso :
+          <select name="select" class="form-control" [(ngModel)]="sexo">
+          <option value="" selected></option> 
+          <option value="2017" >2017</option>
+          <option value="2018">2018</option>
+        </select>
+        <br>
+  
+  
+     
+      <thead class="table table-secondary"> 
+       
+        <tr>
+           
+            <td scope="col">Codigo</td>
+            <td scope="col">Ap.Paterno</td>
+            <td scope="col">Ap.Materno</td>
+            <td scope="col">Nombre</td>
+            <td scope="col">Sexo</td>
+            <td scope="col">Dni</td>
+            <td scope="col">Facultad</td>
+            <td scope="col">Carrera</td>
+            <td scope="col">Año Egreso</td>
+            <td scope="col">Archivo</td>
+            <td scope="col">Opc</td>
+        </tr>
+      </thead>
+      <tbody *ngFor="let d of list | filter:searchText:'codi' | filter:paterno:'ap_paterno'  | filter:materno:'ap_materno' | filter:sexo:'sexo'">
+        <tr>
+            
+            <td><span>{{ d.codi }}</span></td>
+            <td> <span>{{ d.ap_paterno }}</span></td>
+            <td><span>{{ d.ap_materno }}</span></td>
+            <td><span>{{ d.nombre }}</span></td>
+            <td><span>{{ d.sexo }}</span></td>
+            <td><span>{{ d.dni }}</span></td>
+            <td> <span>{{ d.facultad }}</span></td>
+            <td><span>{{ d.carrera }}</span></td>
+            <td><span>{{ d.an_egreso_an }}</span></td>
+            <td><button><img src="" alt=""></button></td>  
+            <span><a routerLink="/clienteform/{{ d.id }}" routerLinkActive="active">Edit</a></span>
+            
+          
+        </tr>
+      </tbody>
+      </table>
+      
+    </div>
+  

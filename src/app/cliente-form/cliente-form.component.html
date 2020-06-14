@@ -1,0 +1,254 @@
+
+<div id="aea text-justify">
+  <form [formGroup]="clienteForm" (ngSubmit)="save()">
+    
+    <table class="table table-active">
+      <tbody>
+          <div class="col col-lg-12 col-md-12 col-sm-12 text-center mb-4" id="minion">
+              <h1 class = "display-4">
+                <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;">
+                  Registro de Títulos
+                </font></font>
+              </h1>
+            </div>
+            <hr>
+        <div class="row" id="aea">
+          <div class="col col-xl-6 col-lg-12 col-md-12 col col-sm-12" id="aea">
+
+            
+
+            <div class="form-group">
+              <label class="col-form-label" for="inputDefault">Código</label>
+              <input type="text" formControlName="codi" name="codi" id="codi" required class="form-control" placeholder="Ingrese su Especialidad">
+            </div>
+
+            <div class="form-group">
+              <label class="col-form-label" for="inputDefault">Centro de Estudios</label>
+              <input type="text" formControlName="ap_paterno" name="ap_paterno" id="ap_paterno" required class="form-control" placeholder="Ingrese su Centro de Estudios">
+            </div>
+  
+                <div class="form-group">
+                  <label class="col-form-label" for="inputDefault">Nivel de Estudios</label>
+                  <input type="text" class="form-control" id="ap_materno" aria-describedby="ap_materno" placeholder="Ingrese su Nivel"formControlName="ap_materno" name="nivel" id="nivel" required>
+                </div>
+  
+                <div class="form-group">
+                  <label class="col-form-label" for="inputDefault">Nombre</label>
+                  <input type="text" class="form-control" formControlName="nombre" name="nombre" id="nombre" required>
+                </div>
+  
+                <div class="form-group">
+                  <label class="col-form-label" for="inputDefault">Sexo</label><br>
+                  <input class="col-form-label" type="radio" name="sexo" id="sexo" value="masculino" formControlName="sexo"> Masculino
+                  <input class="col-form-label" type="radio" name="sexo" id="sexo" value="femenino" formControlName="sexo"> Femenino<br>
+                </div>
+  
+                <div class="form-group">
+                  <label class="col-form-label" for="inputDefault">DNI</label><br>
+                  <input class="form-control" type="text" formControlName="dni" name="dni" id="dni" size="8" minlength="8" maxlength="8" required>
+                </div>
+          </div>
+
+
+          <div class="col col-xl-6 col-lg-12 col-md-12 col col-sm-12" id="aea">
+                               
+                                <div class="form-group">
+                                    <label for="exampleSelect1">Seleccionar Facultad</label>
+                                    <select name="facultad" formControlName="facultad" class="form-control" id="choice1" required>
+                                      <option value="FIA" selected>FIA</option>
+                                      <option value="FCE">FCE</option>
+                                      <option value="FACIHED">FACIHED</option>
+                                      <option value="FACTEO">FACTEO</option>
+                                      <option value="FCS">FCS</option>
+                                    </select>
+                                  </div>
+                               
+                                  <div class="form-group">
+                                      <label for="exampleSelect1">Seleccionar Carrera</label>
+                                      <select name="carrera" formControlName="carrera" class="form-control" id="choice2" required>
+                                        <option value="Ambiental" selected>Ambiental</option>
+                                        <option value="Sistemas">Sistemas</option>
+                                        <option value="Arquitectura">Arquitectura</option>
+                                        <option value="Alimentos">Alimentos</option>
+                                        <option value="Civil">Civil</option>
+
+                                        <option value="Psicología">Psicología</option>
+                                        <option value="Enfermería">Enfermería</option>
+                                        <option value="Medicina">Medicina</option>
+                                        <option value="Medicina">Nutrición</option>
+
+                                        <option value="Teología">Teología</option>
+
+                                        <option value="Comunicaciones">Comunicaciones</option>
+                                        <option value="Lingüística">Lingüística</option>
+                                        <option value="Educación">Educación</option>
+
+                                        <option value="Administración">Administración</option>
+                                        <option value="Contabilidad">Contabilidad</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-form-label" for="inputDefault">Fecha Egreso</label>
+                                        <input class="form-control" type="date" formControlName="an_egreso" name="an_egreso" id="an_egreso" min="2005-01-01" max="2019-12-31" required>
+                                      </div>
+                        
+                                      <div class="form-group">
+                                        <label class="col-form-label" for="inputDefault">Año Egreso</label>
+                                        <select class="form-control" type="number" formControlName="an_egreso_an" name="an_egreso_an" id="an_egreso_an" required>
+                                            <option value="2000">2000</option>
+                                            <option value="2001">2001</option>
+                                            <option value="2002">2002</option>
+                                            <option value="2003">2003</option>
+                                            <option value="2004">2004</option>
+                                            <option value="2005">2005</option>
+                                            <option value="2006">2006</option>
+                                            <option value="2007">2007</option>
+                                            <option value="2008">2008</option>
+                                            <option value="2009">2009</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019" selected>2019</option>
+                                          </select>
+                                      </div>
+                                      
+                        
+                                      <div class="form-group">
+                                        <label class="col-form-label" for="inputDefault">Fecha Ingreso</label>
+                                        <input class="form-control" type="date" formControlName="an_ingreso" name="an_ingreso" id="an_ingreso" min="2000-01-01" max="2015-12-31" required>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="exampleInputFile">Foto Del Titulo</label>
+                                          <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                                          <small id="fileHelp" class="form-text text-muted">Seleccione su Titulo .</small>
+                                        </div>
+                                      </div>
+          </div>
+                                    
+                  </tbody>
+                  </table>
+   <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
+          <button type="submit" [disabled]="!clienteForm.valid" class="btn btn-primary text-center mr-2" id="submit">Modificar Título</button>
+          <button type="submit"  class="btn btn-danger text-center" id="submit">Cancelar</button>
+        </div></form>        
+</div>
+
+
+<!--
+
+<div class="row">
+    <div class="col col-lg-12 col-md-12 col-sm-12 text-justify">
+      <h1 class = "display-4">
+        <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;">
+          Registro de Títulos
+        </font> </font>
+      </h1>
+    </div>
+    
+    
+    <div class="principal">
+      <div>
+        <div class = "jumbotron">
+          <div class="col-lg-10" id="forma">
+            <hr>
+            <form [formGroup]="clienteForm" (ngSubmit)="save()">
+              <div class="row">
+                <div class="col col-lg-6 col-md-12 col-sm-12 text-justify">
+                  <div>
+                    <h3>
+                      <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;">
+                        Datos Personales
+                      </font> </font>
+                    </h3>
+                    <small id = "decripcion" class = "form-text text-muted"> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> MIAU </font> </font> </small>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-form-label" for="inputDefault">Código</label>
+                      <input type="number" formControlName="codi" name="codi" id="codi" required class="form-control" placeholder="Ingrese su Especialidad">
+                    </div>
+      
+                    <div class="form-group">
+                      <label class="col-form-label" for="inputDefault">Centro de Estudios</label>
+                      <input type="text" formControlName="ap_paterno" name="ap_paterno" id="ap_paterno" required class="form-control" placeholder="Ingrese su Centro de Estudios">
+                    </div>
+      
+                    <div class="form-group">
+                      <label class="col-form-label" for="inputDefault">Nivel de Estudios</label>
+                      <input type="text" class="form-control" id="ap_materno" aria-describedby="ap_materno" placeholder="Ingrese su Nivel"formControlName="ap_materno" name="nivel" id="nivel" required>
+                    </div>
+      
+                    <div class="form-group">
+                      <label class="col-form-label" for="inputDefault">Nombre</label>
+                      <input type="text" class="form-control" formControlName="nombre" name="nombre" id="nombre" required>
+                    </div>
+      
+                    <div class="form-group">
+                      <label class="col-form-label" for="inputDefault">Sexo</label><br>
+                      <input class="col-form-label" type="radio" name="sexo" id="sexo" value="masculino" formControlName="sexo"> Masculino
+                      <input class="col-form-label" type="radio" name="sexo" id="sexo" value="femenino" formControlName="sexo"> Femenino<br>
+                    </div>
+      
+                    <div class="form-group">
+                      <label class="col-form-label" for="inputDefault">DNI</label><br>
+                      <input class="form-control" type="number" formControlName="dni" name="dni" id="dni" required>
+                    </div>
+                </div>
+  
+  
+                <div class="col col-lg-6 col-md-12 col-sm-12 text-justify">
+                  <div>
+                    <h3>
+                      <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;">
+                        Datos Académicos
+                      </font> </font>
+                    </h3>
+                    <small id = "decripcion" class = "form-text text-muted"> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> MIAU </font> </font> </small>
+                  </div>
+                  <div class="form-group">
+                      <label class="col-form-label" for="inputDefault">Facultad</label>
+                      <input class="form-control" type="text" formControlName="facultad" name="facultad" id="facultad" required>
+                    </div>
+      
+                    <div class="form-group">
+                      <label class="col-form-label" for="inputDefault">Escuela Profesional</label>
+                      <input class="form-control"  type="text" formControlName="carrera" name="carrera" id="carrera" required>
+                    </div>
+      
+                    <div class="form-group">
+                      <label class="col-form-label" for="inputDefault">Fecha Egreso</label>
+                      <input class="form-control" type="date" formControlName="an_egreso" name="an_egreso" id="an_egreso" required>
+                    </div>
+      
+                    <div class="form-group">
+                      <label class="col-form-label" for="inputDefault">Año Egreso</label>
+                      <input class="form-control" type="number" formControlName="an_egreso_an" name="an_egreso_an" id="an_egreso_an" required>
+                    </div>
+      
+                    <div class="form-group">
+                      <label class="col-form-label" for="inputDefault">Fecha Ingreso</label>
+                      <input class="form-control" type="date" formControlName="an_ingreso" name="an_ingreso" id="an_ingreso" required>
+                    </div>
+      
+                    <div class="form-group">
+                      <label for="exampleInputFile">Foto Del Titulo</label>
+                      <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                      <small id="fileHelp" class="form-text text-muted">Seleccione su Titulo .</small>
+                    </div>
+                </div>
+              </div>
+            </form>
+            <button type="submit" [disabled]="!clienteForm.valid" class="btn btn-primary" id="submit">Agregar Titulo</button>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+-->
